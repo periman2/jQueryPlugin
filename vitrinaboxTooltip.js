@@ -522,17 +522,7 @@ $.fn.vitrinaboxTooltip.defaults = {
 
 // End of main function for widthet.
 })( jQuery );
-  
-
-  $('img').vitrinaboxTooltip({
-  });
-
-  $('a').vitrinaboxTooltip();
-
-  $('#blackbox').vitrinaboxTooltip();
-  
   // ==================
-  // END PLUGIN
+  // END PLUGIN CODE
   // ================== 
-  
 })
