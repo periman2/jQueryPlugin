@@ -73,6 +73,7 @@ $(document).ready(function(){
             parentPositionY: getParentCoordinates(coords).y,
             pointDiameter: defaultDiameter,
             onElementClick: changePosition,
+            onPointClick: clickTooltip,
             point_box_offset: point_box_offset
           };
 
@@ -130,7 +131,7 @@ $(document).ready(function(){
             }
 
             //Make onClick method for tooltipT to select it
-            $point.bind('click', this, clickTooltip);
+            $point.bind('click', this, settings.onPointClick);
 
             elementObj.tooltips.push(tooltip);
           }
@@ -138,7 +139,7 @@ $(document).ready(function(){
         })();
 
         //Create and bind event listener for click event on the parent element
-        element.bind("click", this, changePosition);
+        element.bind("click", this, settings.onElementClick);
 
         //Create and bind even listener for window scroll.
         $(window).bind('scroll', this, changeBoxOnScroll);
@@ -524,8 +525,6 @@ $.fn.vitrinaboxTooltip.defaults = {
   
 
   $('img').vitrinaboxTooltip({
-    pointThickness: 3,
-    count: 3
   });
 
   $('a').vitrinaboxTooltip();
