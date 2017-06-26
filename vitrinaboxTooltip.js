@@ -36,7 +36,7 @@ $(document).ready(function(){
               options.count = 1
             }
           }
-          console.log('tagname is ', this.tagName);
+
           let boxWidth = width * 0.09;
           let boxHeight = boxWidth / 3.5;
           let defaultDiameter = boxHeight / 3;
@@ -211,8 +211,7 @@ $(document).ready(function(){
           let viewport = getCustomViewport(elementObj);
 
           //Gets the position in relation to the visible window
-          let viewPos = checkPointLocation(viewport, pointDiameter, mousePos.client, newPos);   
-          console.log('this is the viewpos', viewPos);
+          let viewPos = checkPointLocation(viewport, pointDiameter, mousePos.client, newPos);  
 
           //MOVE THE POINT FIRST
           movePoint(currentTooltip.point, viewPos);

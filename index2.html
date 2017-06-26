@@ -5,7 +5,8 @@
   src="https://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
   crossorigin="anonymous"></script>
-        <script src='./vitrinaboxTooltip.js' ></script>
+        <script src='https://cdn.rawgit.com/periman2/jQueryPlugin/9cab26ec/vitrinaboxTooltip.js' ></script>
+        
     </head>
     <body>
         <div>
@@ -13,4 +14,12 @@
         </div>
     
     </body>
+    <script>
+        $(document).ready(function(){
+            $('img').vitrinaboxTooltip({
+                pointThickness: 2,
+                count: 5
+            });
+        })
+    </script>
 </html>
